@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@controllers/*": ["./src/controllers/*"],
+			"@entities/*": ["./src/entities/*"],
+			"@config/*": ["./src/config/*"],
+			"@routes/*": ["./src/routes/*"],
+			"@utils/*": ["./src/utils/*"],
+		}
+	}
+}
