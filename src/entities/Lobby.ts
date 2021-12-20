@@ -13,6 +13,10 @@ export class Lobby {
 		Lobby.rooms.set(roomName, [...roomClients, clientId])
 	}
 
+	public roomCapacity(roomName: string): number {
+		return Lobby.rooms.get(roomName)?.length || 0
+	}
+
 	public getRooms = () => {
 		const rooms = Array.from(Lobby.rooms)
 		return rooms.map(([roomName, roomClients]) => {

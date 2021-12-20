@@ -3,7 +3,7 @@ import { Server, Socket } from 'socket.io'
 export interface EventParams {
 	io: Server
 	socket: Socket
-	params: object
+	params: any
 }
 
 export abstract class Event {
