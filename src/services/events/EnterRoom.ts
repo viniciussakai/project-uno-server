@@ -20,7 +20,7 @@ export class EnterRoom implements Event {
 			return
 		}
 
-		lobby.addClient(socket.id, roomName)
+		lobby.addPlayerToRoom(socket.id, roomName)
 		socket.broadcast.emit('updateRooms', lobby.getRooms())
 
 		socket.join(roomName)

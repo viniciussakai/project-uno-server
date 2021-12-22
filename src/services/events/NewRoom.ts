@@ -9,7 +9,7 @@ export class NewRoom implements Event {
 		const lobby = new Lobby()
 
 		lobby.addRoom(roomName)
-		lobby.addClient(socket.id, roomName)
+		lobby.addPlayerToRoom(socket.id, roomName)
 
 		socket.emit('roomCode', roomName)
 		socket.broadcast.emit('updateRooms', lobby.getRooms())
