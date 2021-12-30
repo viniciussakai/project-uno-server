@@ -7,10 +7,11 @@ export class SocketIO {
 	public setInstance(httpServer: HttpServer) {
 		const socketio = new Server(httpServer, {
 			cors: {
-				origin: [process.env.APP_URL || ''],
+				origin: ['http://localhost:3000', 'http://localhost:3001', 'https://admin.socket.io/'],
 				methods: ['GET', 'POST']
 			}
 		})
+
 
 		SocketIO._instance = socketio
 		return this

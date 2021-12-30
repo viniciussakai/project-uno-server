@@ -5,7 +5,7 @@ import { SocketIO } from '@entities/Socket'
 import { SocketController } from '@controllers/socketController'
 import { Lobby } from '@entities/Lobby'
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3333
 
 const app = new Server().express
 const server = http.createServer(app)
