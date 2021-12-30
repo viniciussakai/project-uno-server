@@ -6,14 +6,11 @@ export type GlobalStateMap = Map<string, GameState>
 export interface GameState {
 	players: Player[]
 	flow: Flow
-	playerAtive: string
+	playerAtive: number
 	gameDeck: ICard[]
 	playDeck: ICard[]
 
-	sendCard?: {
-		card: ICard
-		playerId: string
-	}
+	sendCardId?: string
 
 	sendColor?: {
 		color: ICardColor

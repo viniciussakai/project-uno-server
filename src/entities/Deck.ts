@@ -3,7 +3,7 @@ import { shuffleArray } from '@utils/shuffleArray'
 import { randomNumber } from '@utils/randomNumber'
 
 export class Deck {
-	private _cards: ICard[]
+	private _cards: ICard[] = []
 
 	constructor(cards?: ICard[]) {
 		if (cards) {
