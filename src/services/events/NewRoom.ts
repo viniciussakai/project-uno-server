@@ -8,7 +8,7 @@ export class NewRoom implements Event {
 
 		const lobby = new Lobby()
 
-		lobby.addRoom(roomName)
+		lobby.add(roomName)
 		lobby.addPlayerToRoom(socket.id, roomName)
 
 		socket.emit('roomCode', roomName)
@@ -16,5 +16,6 @@ export class NewRoom implements Event {
 
 		socket.join(roomName)
 		socket.data.playerId = 1
+		socket.data.roomName = roomName
 	}
 }
