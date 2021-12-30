@@ -24,6 +24,7 @@ export class EnterRoom implements Event {
 		socket.broadcast.emit('updateRooms', lobby.getRooms())
 
 		socket.join(roomName)
+		socket.data.roomName = roomName
 		socket.data.playerId = roomCapacity + 1
 		socket.emit('enterSucess', {})
 	}
